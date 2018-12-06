@@ -1,0 +1,14 @@
+---
+layout: layouts/default.njk
+title: Home
+permalink: /
+---
+
+<div class="statuses">
+{%- for code, status in statuses -%}
+<figure class="">
+  <img src="/images/{{code}}.gif" alt=""/>
+  <figcaption class=""><a href="https://httpstatuses.com/{{code}}">{{ code }}: {{ status }}</a></figcaption>
+</figure>
+{%- endfor -%}
+</div>

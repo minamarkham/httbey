@@ -1,0 +1,166 @@
+@charset 'utf-8';
+
+// ===========================================================
+// ==[ Mina Dot Codes ]=======================================
+// ===========================================================
+
+@viewport { width: device-width; }
+
+html { box-sizing: border-box; }
+
+* {
+  &,
+  &::before,
+  &::after { box-sizing: inherit; }
+}
+
+* { margin: 0; padding: 0; }
+
+// NOTE: Do not change the order of the imports in this file
+
+:focus {
+  outline: thin solid yellow;
+  outline-offset: .25rem;
+}
+
+a {
+  color: #F497BB;
+  text-decoration: underline;
+  position: relative;
+  z-index: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+code, kbd, pre, samp, tt {
+  font-weight: normal;
+}
+
+ul li { list-style: none; }
+
+.twitter-follow-button {
+	margin-top: 1rem;
+	@media screen and (min-width: 800px) {
+		margin-top: 0;
+		vertical-align: middle;
+		float: right;	
+	}
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+img {
+	border: 1px solid #FFFFFF;
+	width: 353px;
+	height: 215px;
+	object-fit: cover;
+	max-width: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.banner {
+	height: 55px;
+	background-color: black;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 10px 10vw;
+	border-bottom: 1px solid #fff;
+	span { float: right; }
+}
+
+header {
+	display: flex;
+	align-items: center;
+	margin-top: -11.5rem;
+	font-size: 1rem;
+	> :nth-child(2) {
+		font-size: 1.3rem;
+		margin-left: 2rem;
+		width: 500px;
+	}
+}
+
+main {
+  margin: 15rem auto 0;
+  width: 90vw;
+	padding: 2rem;
+	max-width: 60rem;
+}
+
+footer {
+  margin: 1rem auto;
+  width: 90vw;
+	@media screen and (min-width: 800px) {
+		width: 80vw;
+	}
+}
+
+p,
+ul {
+	line-height: 1.5;
+}
+
+@media screen and (min-width:768px) {
+	:root {
+		font-size: 1.1rem;
+	}
+}
+
+small {
+	display: inline-block;
+	text-align: center;
+	@media screen and (min-width: 800px) {
+		display: inline;
+		text-align: left;
+	}
+}
+
+.statuses {
+	margin-top: 2rem;
+	display: grid;
+	grid-gap: 1em;
+	@media screen and (min-width: 600px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (min-width: 800px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+figure {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+figcaption a {
+	text-decoration: none;
+	color: white;
+	&:hover::after {
+	  content: "↗";
+		font-family: system-ui,sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		padding-left: 2px;
+		line-height: .75;
+		font-size: .8em;
+	}
+}
