@@ -1,8 +1,12 @@
 @charset 'utf-8';
 
 // ===========================================================
-// ==[ Mina Dot Codes ]=======================================
+// ==[ HTTBey ]===============================================
 // ===========================================================
+
+@mixin mq($breakpoint, $query: 'min-width', $type: 'screen') {
+  @media #{$type} and (#{$query}: #{$breakpoint}) { @content; }
+}
 
 @viewport { width: device-width; }
 
@@ -88,19 +92,23 @@ body {
 }
 
 header {
-	display: flex;
-	align-items: center;
-	margin-top: -11.5rem;
-	font-size: 1rem;
 	> :nth-child(2) {
-		font-size: 1.3rem;
-		margin-left: 2rem;
-		width: 500px;
+		margin-top: 2rem;
+	}
+	@include mq(600px) {
+		display: flex;
+		align-items: center;
+		font-size: 1rem;
+		> :nth-child(2) {
+			font-size: 1.3rem;
+			margin: 0 0 0 2rem;
+			width: 500px;
+		}
 	}
 }
 
 main {
-  margin: 15rem auto 0;
+  margin: 2rem auto 0;
   width: 90vw;
 	padding: 2rem;
 	max-width: 60rem;

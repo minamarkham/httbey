@@ -86,7 +86,7 @@ function randomize(array) {
 
 function navEmoji() {
   if (navigator.userAgent.indexOf('Mac OS X') != -1) {
-    window.location.hash = '👩🏾‍💻';
+    window.location.hash = '🐝';
   }
 };
 
@@ -100,7 +100,7 @@ var emojis = [
   '&#127863;', // wine
   '&#127850;', // cookie
   '&#128131;', // dancer
-  '💅',  // nail care
+  '🐝',  // nail care
   '🎉',  //  tada
   '💯',  //  100
   '🍕',  //  pizza
