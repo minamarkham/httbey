@@ -1,15 +1,9 @@
-# Dirs
-www/
+# dependencies
+/node_modules
 
-# Dependency directories
-node_modules/
+# next.js
+/.next/
 
-# Logs
-*.log
-npm-debug.log*
-
-# dotenv environment variables file
-.env
-
-# mac shit
+# misc
+Icon?
 .DS_Store
