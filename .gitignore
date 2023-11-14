@@ -5,6 +5,7 @@
 /.next/
 
 www
+convert.sh
 
 # misc
 Icon?
