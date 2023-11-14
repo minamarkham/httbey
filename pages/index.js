@@ -23,8 +23,8 @@ export default function Home({ statusObj }) {
 				<p>
 					HTTBey Status Codes is an easy to reference database of HTTP Status Codes with
 					their definitions and helpful code references all in one place. Visit an
-					individual status code via <code>httbey.com/[code]</code> or browse the list
-					below.
+					individual status code via <code>httbey.com/status/[code]</code> or browse the
+					list below.
 				</p>
 				<ThumbnailGrid>
 					{Object.values(statusObj).map((status, idx) => {
