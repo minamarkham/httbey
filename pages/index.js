@@ -29,7 +29,7 @@ export default function Home({ statusObj }) {
 				<ThumbnailGrid>
 					{Object.values(statusObj).map((status, idx) => {
 						return (
-							<Link key={idx} className="status" href={`/${status.code}`}>
+							<Link key={idx} className="status" href={`/status/${status.code}`}>
 								<Thumbnail status={status} reducedMotion={reducedMotion} />
 							</Link>
 						);

@@ -7,8 +7,8 @@ import rehypeStringify from 'rehype-stringify';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PlayButton from '../components/PlayButton';
-import { statuses, categories } from '../lib/statuses';
+import PlayButton from '../../components/PlayButton';
+import { statuses, categories } from '../../lib/statuses';
 
 export default function Status({ status, content }) {
 	const router = useRouter();
