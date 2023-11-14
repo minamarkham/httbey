@@ -4,6 +4,8 @@
 # next.js
 /.next/
 
+www
+
 # misc
 Icon?
 .DS_Store
