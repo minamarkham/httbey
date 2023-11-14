@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import PlayButton from '../components/PlayButton';
 import { statuses, categories } from '../lib/statuses';
-import { Metadata } from 'next';
 
 export default function Status({ status, content }) {
 	const router = useRouter();

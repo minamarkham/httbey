@@ -4,7 +4,6 @@ import ThumbnailGrid from '../components/ThumbnailGrid';
 import Thumbnail from '../components/Thumbnail';
 import { statuses } from '../lib/statuses';
 import useReducedMotion from '../lib/useReducedMotion';
-import { Metadata } from 'next';
 
 export default function Home({ statusObj }) {
 	const reducedMotion = useReducedMotion(false);
@@ -54,44 +53,6 @@ export default function Home({ statusObj }) {
 		</div>
 	);
 }
-
-export const metadata = {
-	icons: {
-		icon: '/favicon.ico',
-		shortcut: '/favicon.png',
-		apple: '/apple-touch-icon.png',
-		other: [{ rel: 'apple-touch-icon-precomposed', url: '/apple-touch-icon.png' }],
-	},
-	viewport: 'width=device-width, initial-scale=1',
-	title: 'HTTP Cats',
-	description:
-		'An API for the awesome HTTP Cats! Use it in your website to show funny error messages.',
-	keywords: 'http, cats, http cats, http status cats, status cats, api, lolcats, error',
-	authors: [{ name: 'Rogério Vicente', url: 'https://github.com/rogeriopvl' }],
-	openGraph: {
-		type: 'website',
-		title: 'HTTP Cats',
-		url: 'https://http.cat',
-		images: [
-			{
-				url: 'https://http.cat/100.jpg',
-				alt: 'HTTP Cats',
-			},
-		],
-		siteName: 'HTTP Status Cats API',
-		description: 'API for HTTP Cats',
-	},
-	twitter: {
-		card: 'summary_large_image',
-		site: 'https://http.cat',
-		creator: '@rogeriopvl',
-		title: 'HTTP Cats',
-		description: 'API for HTTP Cats',
-		images: ['https://http.cat/100'],
-	},
-	themeColor: '#d0383e',
-	manifest: '/manifest.json',
-};
 
 export async function getStaticProps() {
 	const statusObj = statuses;
