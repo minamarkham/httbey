@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { HeadElem as Head } from '../components/Head';
 import Link from 'next/link';
 import ThumbnailGrid from '../components/ThumbnailGrid';
 import Thumbnail from '../components/Thumbnail';
@@ -10,11 +10,7 @@ export default function Home({ statusObj }) {
 
 	return (
 		<div className="app">
-			<Head>
-				<title>HTTBey Status Codes</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-
+			<Head metadata={metadata} />
 			<header>
 				<p className="header__title">HTTBey Status Codes</p>
 			</header>
@@ -62,3 +58,30 @@ export async function getStaticProps() {
 		},
 	};
 }
+
+const metadata = {
+	title: 'HTTBey Status Codes',
+	description: 'Beyoncé-inspired HTTP Status Codes',
+	generator: 'Next.js',
+	url: 'https://httbey.com',
+	openGraph: {
+		title: 'HTTBey Status Codes',
+		description: 'Beyoncé-inspired HTTP Status Codes',
+		image: {
+			src: '/og-image.png',
+			alt: 'HTTBey Status Codes',
+		},
+		locale: 'en_US',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'HTTBey Status Codes',
+		description: 'Beyoncé-inspired HTTP Status Codes',
+		site: 'https://httbey.com',
+		image: {
+			src: '/og-image.png',
+			alt: 'HTTBey Status Codes',
+		},
+	},
+};

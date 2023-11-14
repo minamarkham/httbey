@@ -4,7 +4,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeStringify from 'rehype-stringify';
-import Head from 'next/head';
+import { HeadElem as Head } from '../../components/Head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import PlayButton from '../../components/PlayButton';
@@ -15,12 +15,36 @@ export default function Status({ status, content }) {
 	const { statusId } = router.query;
 	const title = `${status.code} ${status.message} | HTTBey Status Codes`;
 
+	const metadata = {
+		title: title,
+		description: `HTTBey for status ${status.code} ${status.message}`,
+		generator: 'Next.js',
+		url: `https://httbey/status/${status.code}`,
+		openGraph: {
+			title: title,
+			description: 'Beyoncé-inspired HTTP Status Codes',
+			image: {
+				src: '/og-image.png',
+				alt: `${status.code} ${status.message}`,
+			},
+			locale: 'en_US',
+			type: 'website',
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: title,
+			description: 'Beyoncé-inspired HTTP Status Codes',
+			site: `https://httbey/status/${status.code}`,
+			image: {
+				src: '/og-image.png',
+				alt: `${status.code} ${status.message}`,
+			},
+		},
+	};
+
 	return (
 		<div className="app">
-			<Head>
-				<title>{title}</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+			<Head metadata={metadata} />
 			<header>
 				<p className="header__title">HTTBey Status Codes</p>
 			</header>
@@ -144,28 +168,4 @@ export async function getStaticProps(context) {
 			props: {},
 		};
 	}
-}
-
-export function generateMetadata({ params }) {
-	const statusObj = statuses.statuses[params.statusId];
-
-	return {
-		title: `${statusObj.code} ${statusObj.message} | HTTBey`,
-		description: `HTTBey for status ${statusObj.code} ${statusObj.message}`,
-		openGraph: {
-			title: `${statusObj.code} ${statusObj.message} | HTTBey`,
-			images: [
-				{
-					url: `https://httbey/${statusObj.code}.jpg`,
-					alt: statusObj.message,
-				},
-			],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			site: `https://httbey/status/${statusObj.code}`,
-			title: `${statusObj.code} ${statusObj.message} | HTTBey`,
-			images: [`https://httbey/${statusObj.code}`],
-		},
-	};
 }
