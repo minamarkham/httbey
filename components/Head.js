@@ -21,11 +21,11 @@ export const HeadElem = ({ metadata }) => (
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content={metadata.twitter.site} />
 		<meta name="twitter:creator" content="@minamarkham" />
-		<meta name="twitter:url" content={metadata.url} />
+		<meta name="twitter:url" content={metadata.twitter.site} />
 		<meta name="twitter:title" content={metadata.twitter.title} />
 		<meta name="twitter:description" content={metadata.twitter.description} />
 		<meta name="twitter:image" content={metadata.twitter.image.src} />
-		<meta name="twitter:image:alt" content={metadata.description} />
+		<meta name="twitter:image:alt" content={metadata.twitter.image.alt} />
 		<link rel="canonical" href={metadata.url} />
 		<meta name="theme-color" content="#000000" />
 		<link rel="manifest" href="/manifest.json" />

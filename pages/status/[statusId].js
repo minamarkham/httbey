@@ -19,12 +19,12 @@ export default function Status({ status, content }) {
 		title: title,
 		description: `HTTBey for status ${status.code} ${status.message}`,
 		generator: 'Next.js',
-		url: `https://httbey/status/${status.code}`,
+		url: `https://httbey.com/status/${status.code}`,
 		openGraph: {
 			title: title,
 			description: `HTTBey for status ${status.code} ${status.message}`,
 			image: {
-				src: `https://httbey/og/${status.code}.jpg`,
+				src: `https://httbey.com/og/${status.code}.jpg`,
 				alt: `${status.code} ${status.message}`,
 			},
 			locale: 'en_US',
@@ -34,9 +34,9 @@ export default function Status({ status, content }) {
 			card: 'summary_large_image',
 			title: title,
 			description: `HTTBey for status ${status.code} ${status.message}`,
-			site: `https://httbey/status/${status.code}`,
+			site: `https://httbey.com/status/${status.code}`,
 			image: {
-				src: `https://httbey/og/${status.code}.jpg`,
+				src: `https://httbey.com/og/${status.code}.jpg`,
 				alt: `${status.code} ${status.message}`,
 			},
 		},
