@@ -68,7 +68,7 @@ const metadata = {
 		title: 'HTTBey Status Codes',
 		description: 'Beyoncé-inspired HTTP Status Codes',
 		image: {
-			src: '/og-image.png',
+			src: '/og-image.jpg',
 			alt: 'HTTBey Status Codes',
 		},
 		locale: 'en_US',
@@ -80,7 +80,7 @@ const metadata = {
 		description: 'Beyoncé-inspired HTTP Status Codes',
 		site: 'https://httbey.com',
 		image: {
-			src: '/og-image.png',
+			src: '/og-image.jpg',
 			alt: 'HTTBey Status Codes',
 		},
 	},
