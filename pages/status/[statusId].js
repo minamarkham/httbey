@@ -13,7 +13,7 @@ import { statuses, categories } from '../../lib/statuses';
 export default function Status({ status, content }) {
 	const router = useRouter();
 	const { statusId } = router.query;
-	const title = `${status.code} ${status.message} | HTTBey Status Codes`;
+	const title = `${status.code} ${status.message} | HTTBey`;
 
 	const metadata = {
 		title: title,
@@ -22,9 +22,9 @@ export default function Status({ status, content }) {
 		url: `https://httbey/status/${status.code}`,
 		openGraph: {
 			title: title,
-			description: 'Beyoncé-inspired HTTP Status Codes',
+			description: `HTTBey for status ${status.code} ${status.message}`,
 			image: {
-				src: '/og-image.png',
+				src: `https://httbey/og/${status.code}.jpg`,
 				alt: `${status.code} ${status.message}`,
 			},
 			locale: 'en_US',
@@ -33,10 +33,10 @@ export default function Status({ status, content }) {
 		twitter: {
 			card: 'summary_large_image',
 			title: title,
-			description: 'Beyoncé-inspired HTTP Status Codes',
+			description: `HTTBey for status ${status.code} ${status.message}`,
 			site: `https://httbey/status/${status.code}`,
 			image: {
-				src: '/og-image.png',
+				src: `https://httbey/og/${status.code}.jpg`,
 				alt: `${status.code} ${status.message}`,
 			},
 		},
